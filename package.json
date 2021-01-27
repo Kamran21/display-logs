@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "display-logs",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server:start": "yarn workspace server restart",
+    "file_listener:start": "yarn workspace file_listener restart",
+    "start": "concurrently --kill-others-on-fail \"yarn server:start\" \"yarn file_listener:start\" \"yarn client\"",
+    "server:dev": "yarn workspace server dev",
+    "file_listener:dev": "yarn workspace file_listener dev",
+    "dev": "concurrently --kill-others-on-fail \"yarn server:dev\" \"yarn file_listener:dev\" \"yarn client\""
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
