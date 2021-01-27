@@ -2,22 +2,20 @@
 
 ## Includs:
 
-- Client: An app with React.js & Redux & MUI
-- FileListener: a file watcher that emits events to the server
+- client: An app with React.js & Redux & MUI
+- file_listener: a file watcher that emits events to the server
 - server: expose a socket that the clients can connect to and receive messages about file changes
 
 ```
 project
    |-client
-   |-FileListener
+   |-file_listener
    |-server
 ```
 
-## From each one of the folders:
+## installation:
 
 ```
-yarn i
-yarn start
+yarn install
+yarn dev
 ```
-
-(for server and FileListener also >yarn dev)
